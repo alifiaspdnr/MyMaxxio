@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyMaxxio</string>
+    <string name="profile">Profil\n</string>
+    <string name="notification">Notifikasi</string>
+    <string name="kegiatan">Kegiatan</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_komunitas"><![CDATA[Komunitas pengguna roda empat yang terbentuk di Jakarta, 27  Februari 2011 oleh pengguna mobil Daihatsu GranMax dan Luxio]]></string>
+</resources>

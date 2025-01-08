@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadUangKas"
+    android:background="@color/hitam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/kembali"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Upload Uang Kas Member"
+            app:titleTextColor="@color/kuning"
+            app:navigationIcon="@drawable/ic_arrow_back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan upload bukti transfer Anda di bawah ini."
+        android:layout_below="@id/kembali"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/putih"/>
+
+    <LinearLayout
+        android:id="@+id/btn_upload_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn_style"
+        android:layout_below="@id/txt"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_create_post"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Foto"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/file_name_text"
+        android:layout_below="@id/txt"
+        android:layout_toRightOf="@id/btn_upload_file"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/abu2_teks"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/fotonya"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/btn_upload_file"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="64dp"
+        android:text="Upload"
+        android:textSize="15sp"
+        android:textColor="@color/hitam"
+        android:backgroundTint="@color/kuning"/>
+
+</RelativeLayout>

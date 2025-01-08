@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="post_levels_array">
+        <item>Nasional</item>
+        <item>Regional</item>
+        <item>Chapter</item>
+    </string-array>
+
+    <string-array name="event_array">
+        <item>Semua Kegiatan</item>
+        <item>Nasional</item>
+        <item>Regional Saya</item>
+        <item>Chapter Saya</item>
+        <item>Kegiatan Saya</item>
+        <item>Kegiatan Usulan (Dalam Review)</item>
+        <item>Kegiatan Usulan (Ditolak)</item>
+    </string-array>
+
+    <string-array name="uangkas_array">
+        <item>Uang Kas Saya</item>
+        <item>Tagihan Saya</item>
+        <item>Dalam Review</item>
+        <item>Lunas</item>
+        <item>Ditolak</item>
+        <item>Uang Kas Chapter</item>
+    </string-array>
+
+    <string-array name="req_event_array">
+        <item>Nasional</item>
+        <item>Regional</item>
+        <item>Chapter</item>
+    </string-array>
+
+    <string-array name="req_event_regional_array">
+        <item>Jakarta Raya</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Timur</item>
+    </string-array>
+
+    <string-array name="req_event_chapter_array">
+        <item>Jakarta Raya</item>
+        <item>Debora</item>
+        <item>Surabaya</item>
+    </string-array>
+</resources>

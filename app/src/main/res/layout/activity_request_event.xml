@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestEvent"
+    android:background="@color/hitam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/kembali"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Request Tambah Kegiatan"
+            app:titleTextColor="@color/kuning"
+            app:navigationIcon="@drawable/ic_arrow_back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@id/kembali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
+        <RelativeLayout
+            android:id="@+id/textinput"
+            android:layout_below="@+id/kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/txt_namakegiatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Kegiatan"
+                android:textColor="@color/putih"
+                android:textSize="15sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput1"
+                android:layout_below="@id/txt_namakegiatan"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/nama_kegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Kegiatan"
+                    android:textColor="@color/kuning"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_tingkatan"
+                android:layout_below="@id/textinput1"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_tingkatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tingkatan"
+                    android:textColor="@color/putih"
+                    android:textSize="15sp"/>
+                <Spinner
+                    android:id="@+id/dropdown_tingkatan"
+                    android:layout_below="@id/txt_tingkatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/circle_spinner_putih"
+                    android:popupBackground="@color/kuning"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_regional"
+                android:layout_below="@id/textinput1"
+                android:layout_toRightOf="@id/layout_tingkatan"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_regional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regional"
+                    android:textColor="@color/putih"
+                    android:textSize="15sp"/>
+                <Spinner
+                    android:id="@+id/dropdown_regional"
+                    android:layout_below="@id/txt_regional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/circle_spinner_putih"
+                    android:popupBackground="@color/kuning"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_chapter"
+                android:layout_below="@id/textinput1"
+                android:layout_toRightOf="@id/layout_regional"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chapter"
+                    android:textColor="@color/putih"
+                    android:textSize="15sp"/>
+                <Spinner
+                    android:id="@+id/dropdown_chapter"
+                    android:layout_below="@id/txt_chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/circle_spinner_putih"
+                    android:popupBackground="@color/kuning"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_desc_singkat"
+                android:layout_below="@id/layout_tingkatan"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Singkat Kegiatan"
+                android:textColor="@color/putih"
+                android:textSize="15sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput2"
+                android:layout_below="@id/txt_desc_singkat"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/desc_singkat"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:hint="Deskripsi Singkat Kegiatan"
+                    android:textColor="@color/kuning"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txt_desc_kegiatan"
+                android:layout_below="@id/textinput2"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Kegiatan"
+                android:textColor="@color/putih"
+                android:textSize="15sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput3"
+                android:layout_below="@id/txt_desc_kegiatan"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/desc_kegiatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="99dp"
+                    android:hint="Deskripsi Kegiatan"
+                    android:textColor="@color/kuning"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txt_tanggal"
+                android:layout_below="@id/textinput3"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal"
+                android:textColor="@color/putih"
+                android:textSize="15sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput4"
+                android:layout_below="@id/txt_tanggal"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/tanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pilih tanggal kegiatan"
+                    android:textColor="@color/kuning"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:clickable="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/textinput4"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:id="@+id/btn_upload_fotoevent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textinput4"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_btn_style"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_create_post" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        android:text="Tambah Foto"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_simpan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/kuning"
+                    android:text="Simpan"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

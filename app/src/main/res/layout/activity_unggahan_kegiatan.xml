@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnggahanKegiatan"
+    android:background="@color/hitam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/kembali"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Unggahan Kegiatan"
+            app:titleTextColor="@color/kuning"
+            app:navigationIcon="@drawable/ic_arrow_back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/unggahanKegiatanList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/kembali"/>
+
+    <ImageButton
+        android:id="@+id/button_create_post"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_create_post"
+        android:background="@drawable/circle_button_create_post"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="Create Post" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NotifFragment"
+    android:background="@color/hitam">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/layout_header" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_notif_container"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"
+        android:layout_width="364dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/tab_background"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabGravity="center"
+            app:tabRippleColor="@null"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp" />
+    </FrameLayout>
+
+</RelativeLayout>

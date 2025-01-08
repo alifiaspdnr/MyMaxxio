@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@color/hitam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/kembali"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Registrasi"
+            app:titleTextColor="@color/kuning"
+            app:navigationIcon="@drawable/ic_arrow_back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@id/kembali"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="64dp">
+        <RelativeLayout
+            android:layout_below="@id/kembali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="48dp"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/selamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/regis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat Bergabung!"
+                    android:textColor="@color/kuning"
+                    android:textStyle="bold"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:id="@+id/apakabar"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/regis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Siapkan alamat Gmail aktif dan foto selfie dengan KTA Anda."
+                    android:textColor="@color/kuning"
+                    android:textStyle="normal"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textinput"
+                android:layout_below="@+id/selamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/hitam">
+                    <EditText
+                        android:id="@+id/idmember"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ID Member"
+                        android:textColor="@color/kuning"
+                        android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput2"
+                    android:layout_below="@+id/textinput1"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/hitam">
+                    <EditText
+                        android:id="@+id/nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Lengkap"
+                        android:textColor="@color/kuning"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput3"
+                    android:layout_below="@+id/textinput2"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/hitam">
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email (Gmail) Aktif"
+                        android:textColor="@color/kuning"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput4"
+                    android:layout_below="@+id/textinput3"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/hitam">
+                    <EditText
+                        android:id="@+id/no_hp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="No. HP (WA)"
+                        android:textColor="@color/kuning"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_regional"
+                    android:layout_below="@id/textinput4"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_regional"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Regional"
+                        android:textColor="@color/putih"
+                        android:textSize="15sp"/>
+                    <Spinner
+                        android:id="@+id/dropdown_regional"
+                        android:layout_below="@id/txt_regional"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/circle_spinner_putih"
+                        android:popupBackground="@color/kuning"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_chapter"
+                    android:layout_below="@id/textinput4"
+                    android:layout_toRightOf="@id/layout_regional"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_chapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chapter"
+                        android:textColor="@color/putih"
+                        android:textSize="15sp"/>
+                    <Spinner
+                        android:id="@+id/dropdown_chapter"
+                        android:layout_below="@id/txt_chapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/circle_spinner_putih"
+                        android:popupBackground="@color/kuning"/>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput5"
+                    android:layout_below="@+id/layout_regional"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/hitam">
+                    <EditText
+                        android:id="@+id/nopol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="No. Polisi"
+                        android:textColor="@color/kuning"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_upload_kta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_btn_style"
+                    android:layout_below="@id/textinput5"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+                    <ImageView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_create_post"/>
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Foto Selfie dengan KTA"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/file_name_text"
+                    android:layout_below="@id/btn_upload_kta"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/abu2_teks"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_regis"
+                android:layout_below="@id/textinput"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrasi"
+                android:textSize="15sp"
+                android:textColor="@color/hitam"
+                android:backgroundTint="@color/kuning"/>
+
+            <TextView
+                android:id="@+id/sudah"
+                android:layout_below="@id/button_regis"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah memiliki akun?"
+                android:textSize="12sp"
+                android:textColor="@color/abu2_teks"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

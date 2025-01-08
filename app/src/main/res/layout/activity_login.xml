@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@color/hitam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/kembali"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Login"
+            app:titleTextColor="@color/kuning"
+            app:navigationIcon="@drawable/ic_arrow_back"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/selamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/selamatdatang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang!"
+                android:textColor="@color/kuning"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/apakabar"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/selamatdatang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apa kabar, Maxxioers? Masuk dulu, yuk."
+                android:textColor="@color/kuning"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textinput"
+            android:layout_below="@+id/selamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="@color/kuning"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/textinput1"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/kuning"
+                app:boxBackgroundColor="@color/hitam">
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColor="@color/kuning"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/lupa"
+            android:layout_below="@id/textinput"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lupa password?"
+            android:textSize="12sp"
+            android:textColor="@color/abu2_teks"/>
+        
+        <Button
+            android:id="@+id/button_masuk"
+            android:layout_below="@id/lupa"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masuk"
+            android:textSize="15sp"
+            android:textColor="@color/hitam"
+            android:backgroundTint="@color/kuning"/>
+
+        <TextView
+            android:id="@+id/belum"
+            android:layout_below="@id/button_masuk"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Belum memiliki akun?"
+            android:textSize="12sp"
+            android:textColor="@color/abu2_teks"/>
+    </RelativeLayout>
+
+</RelativeLayout>

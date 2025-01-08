@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@color/hitam">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/layout_header" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/selamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/apakabar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apa kabar?"
+                android:textColor="@color/kuning"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+            <TextView
+                android:id="@+id/selamatdatang"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/apakabar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang di MyMaxxio!"
+                android:textColor="@color/kuning"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/info_komunitas"
+            android:layout_below="@id/selamat"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_info_komunitas"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="53dp"
+                android:src="@drawable/logo_maxxio"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:text="@string/info_komunitas"
+                android:textSize="12sp"
+                android:textColor="@color/abu2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_komunitas"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Utama"
+                android:textColor="@color/kuning"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/header"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/btn_forum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imageForum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_forum"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/imageForum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Forum Diskusi"
+                        android:textSize="12sp"
+                        android:textColor="@color/putih"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_kegiatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp">
+                    <ImageView
+                        android:id="@+id/imageKegiatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_kegiatan"/>
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/imageKegiatan"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kegiatan"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/putih"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_uangkas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp">
+                    <ImageView
+                        android:id="@+id/imageUangkas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_home_uangkas"/>
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/imageUangkas"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uang Kas"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@color/putih"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
