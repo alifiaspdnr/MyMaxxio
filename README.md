@@ -2,10 +2,10 @@
 Android-based Community Information System for GranMax Luxio Club Indonesia.
 
 ## Features
-- Community announcements
-- Personal and chapter cash records (uang kas)
-- Discussion forums
-- Event management
+- Community Announcements
+- Members and Chapters Cash Records (uang kas)
+- Discussion Forums
+- Event Management
 
 ## Technologies Used
 - Android Studio (Java)
